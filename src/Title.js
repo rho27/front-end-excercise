@@ -35,7 +35,7 @@ function Title(){
                     <li key = {item}> {item.recipeName} </li>
                 ))}
             </ul>
-            {empty === false &&
+            {empty === true &&
                 <div>
                     There are no recipes to list
                 </div>
