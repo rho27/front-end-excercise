@@ -35,7 +35,7 @@ function Title(){
                     <li key = {item}> {item.recipeName} </li>
                 ))}
             </ul>
-            <h2>{empty}</h2>
+            {empty}
             {showButton === true && 
                 <button onClick={addRecipeForm}>
                 Add Recipe
