@@ -13,7 +13,7 @@ function Title(){
     function handleAdd(){
         const newRecipeList = recipeList.concat({recipeName, recipeInst})
 
-        setEmpty(false));
+        setEmpty(false);
         setList(newRecipeList);
         setForm(false);
         setButton(true);
