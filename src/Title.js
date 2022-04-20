@@ -6,14 +6,14 @@ function Title(){
     const [recipeList, setList] = React.useState(initialList);
     const [recipeName, setRecipeName] = React.useState('');
     const [recipeInst, setRecipeInst] = React.useState('');
-    const [empty, setEmpty] = React.useState('There are no recipe to list')
+    const [empty, setEmpty] = React.useState(true)
     const [showForm, setForm] = React.useState(false)
     const [showButton, setButton] = React.useState(true)
 
     function handleAdd(){
         const newRecipeList = recipeList.concat({recipeName, recipeInst})
 
-        setEmpty('');
+        setEmpty(false));
         setList(newRecipeList);
         setForm(false);
         setButton(true);
@@ -35,7 +35,11 @@ function Title(){
                     <li key = {item}> {item.recipeName} </li>
                 ))}
             </ul>
-            {empty}
+            {empty === false &&
+                <div>
+                    There are no recipes to list
+                </div>
+            }
             {showButton === true && 
                 <button onClick={addRecipeForm}>
                 Add Recipe
