@@ -1,10 +1,10 @@
 import './App.css';
+import Title from './Title'
 
 function App() {
   return (
-    <div>
-      <h1 className="doNotRemoveMe">Hello world.</h1>
-      {/* ^ Do not remove this element ^ */}
+    <div classname = "App">
+      <Title/>
     </div>
   );
 }
